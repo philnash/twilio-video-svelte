@@ -28,7 +28,6 @@
   };
 
   onMount(() => {
-    console.log(participant);
     videoTrack = Array.from(participant.videoTracks.values())[0];
     if (typeof videoTrack !== "undefined") {
       videoTrack.attach(videoElement);
@@ -41,7 +40,6 @@
     participant.on("trackUnsubscribed", trackUnsubscribed);
 
     return () => {
-      console.log("Unmounting participant");
       participant.removeAllListeners();
       if (videoTrack) {
         videoTrack.detach();

@@ -26,15 +26,12 @@
     room = await Video.connect(token, { name: roomName });
     participants = Array.from(room.participants.values());
     room.on("participantConnected", participant => {
-      console.log("Connected: ", participant);
       participants = [...participants, participant];
     });
     room.on("participantDisconnected", participant => {
-      console.log("Disconnected: ", participant);
       participants = participants.filter(p => p !== participant);
     });
     return () => {
-      console.log("Disconnecting room");
       disconnect();
     };
   });
