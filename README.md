@@ -2,6 +2,8 @@
 
 This is a first attempt at creating a simple video chat application using [Twilio Video](https://www.twilio.com/docs/video) and [Svelte](https://svelte.dev) as the front end framework.
 
+![An example of the video chat. It's me waving at myself in a video chat with myself.](https://i.imgur.com/eZB4NZR.png)
+
 ## Running the project
 
 ### What you'll need
