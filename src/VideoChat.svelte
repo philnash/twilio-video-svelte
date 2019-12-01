@@ -24,7 +24,6 @@
 </script>
 
 {#if token !== null}
-  <p>We have a token!</p>
   <Room {token} {roomName} {destroyToken} />
 {:else}
   <form on:submit|preventDefault={handleSubmit}>
